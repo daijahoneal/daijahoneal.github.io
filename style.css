@@ -5,13 +5,15 @@ body {
     font-family: arial;
 }
 #all-contents {
-  max-width: 800px;
+  max-width: 1500px;
     margin: auto;
 }
 
 /* navigation menu */
 nav {
     background: rgb(255, 127, 225);
+    border-style: double;
+    border-radius: 800px;
    margin: 0 auto;
     display: flex;
     padding: 20px;
@@ -39,6 +41,7 @@ a {
 main {
     background: rgb(245, 238, 219);
     display: flex;
+    border-radius: 25px
 }
 .sidebar {
     margin-right: 25px;
