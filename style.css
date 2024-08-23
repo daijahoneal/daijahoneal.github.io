@@ -63,9 +63,10 @@ main {
 h2, h3 {
     margin: 0px;
 }
+        
          /* portfolio styles */
          .content h1 {
-            color: black;
+            color: rgb(255, 157, 234);
         }
 
         #portfolio {
@@ -73,28 +74,18 @@ h2, h3 {
             padding-left: 0;
         }
 
-                 /* portfolio styles */
-                 .content h1 {
-                    color: black;
-                }
-       
-                #portfolio {
-                    list-style-type: none;
-                    padding-left: 0;
-                }
-       
-                #portfolio li {
-                    background: #ff58d0;
-                    padding: 10px;
-                    border-radius: 10px;
-                    margin-bottom: 10px;
-                }
-       
-                #portfolio li:hover {
-                    background: #ffffff;
-                }
-       
-                #portfolio a {
-                    text-decoration: none;
-                    color: #ff00b3;
-                }
+        #portfolio li {
+            background: #ff00ae;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        #portfolio li:hover {
+            background: #ff93ed;
+        }
+
+        #portfolio a {
+            text-decoration: none;
+            color: #743967;
+        }
