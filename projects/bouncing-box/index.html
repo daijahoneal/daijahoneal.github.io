@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Bouncing Box</title>
+	<link rel="stylesheet" href="style.css">
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
@@ -69,28 +70,31 @@
 			var positionX = 0;
 			var points = 0;
 			var speed = 10;
+			var positionY = 0;
+			var speedY = 10;
+			var boardHeight = jQuery(window).height();
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
-			function update() {
+			function update(newPositionX, newPositionY) {
 		/* Code to Increase postionX by 10 HERE */
+		box.css("left", newPositionX);
+		box.css("top", newPositionY);
+		
+		moveBoxTo(positionX, positionY);
+
          positionX = positionX + speed;
 			moveBoxTo(positionX);
-
-		positionX = positionX + speed;
-				moveBoxTo(positionX);
+		
 
 			if (positionX > boardWidth) {
-				positionX = 200;
-				boardWidth = 50;
-				speed = -100;
+				speed = -speed;
+          }
 
-			}
-
-			if (positionX > 0){
-				speed += 3
+			if(positionX < 0){
+				speed = -speed;
 			}
 		};
 
@@ -101,12 +105,21 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
-				speed += 3;
+
+				if (speed >= 1){
+					speed += 3;
+				}
+
+				else if(speed < 0){
+					speed -= 3;
+				}
 				// your code to increase the points variable 1
 
 				changeBoxText(points);
 				points = points + 1;
 				changeBoxText(points);
+
+
 			};
 
 
